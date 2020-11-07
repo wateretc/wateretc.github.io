@@ -1,3 +1,18 @@
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
 @import url('https://fonts.googleapis.com/css?family=Montserrat:wght@700');html,body{background-colour:inherit;font-color:#ffffff},section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}body{font-size:18px;font-color:#ffffff;line-height:1.5em;font-family: 'Montserrat:wght@700', sans-serif;}
 a<img { display: none; }
 a:hover<img { display: inline; }
