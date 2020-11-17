@@ -8,10 +8,10 @@
   box-sizing: border-box;
 }
 
-/* Create four equal columns that floats next to each other */
+/* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
+  width: 33%;
   padding: 0px;
 }
 
@@ -20,6 +20,15 @@
   content: "";
   display: table;
   clear: both;
+}
+  
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 </style>
     
