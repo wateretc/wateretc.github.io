@@ -228,10 +228,6 @@ html, body {
   padding: 0;
   font-size: 18px;
   line-height: 1.25;
-  background-image: url('https://wateretc.github.io/bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;}
   @media (min-width: 768px) {
     html, body {
       font-size: 24px; } }
@@ -242,10 +238,7 @@ body, select, input, textarea, button {
   font-family: 'graphik', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 600;
   color: #000; 
-  background-image: url('https://wateretc.github.io/bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;}
+}
 
 a {
   color: #000;
