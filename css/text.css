@@ -373,7 +373,7 @@ input, textarea {
   .top.open .menu {
     color: #000; }
     .top.open .menu .icon {
-      transform: rotate(45deg); }
+      transform: rotate(90deg); }
   .top.open ul {
     transform: translate(0, 0); }
 
