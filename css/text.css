@@ -596,7 +596,7 @@ main {
     text-indent: 2em;
     margin-bottom: 0; }
     .people .person p:first-of-type, .studio-footer .person p:first-of-type {
-      text-indent: 0; }
+      text-indent: 2em; }
 
 .studio-footer h2 {
   margin-top: 0.66em; }
