@@ -286,7 +286,7 @@ input, textarea {
   top: 0;
   width: 100%;
   z-index: 20;
-  color: #fff; }
+  color: #transparent; }
   .top .menu {
     position: fixed;
     z-index: 25;
@@ -313,7 +313,7 @@ input, textarea {
     width: calc(100% - 2.05rem);
     height: 100%;
     transition: 0.5s;
-    background: #fff;
+    background: #trnsparent;
     padding: 0 1rem 0.373rem 2.05rem;
     transform: translate(-100%, 0);
     overflow: auto;
@@ -369,7 +369,6 @@ input, textarea {
       overflow: hidden;
       padding: 0;
       position: absolute;
-      width: 1px;
       white-space: nowrap; }
   .top.open .menu {
     color: #000; }
@@ -379,12 +378,12 @@ input, textarea {
     transform: translate(0, 0); }
 
 .home .top .menu, .project .top.switch .menu {
-  color: #fff; }
+  color: #transparent; }
   @media (min-width: 600px) {
     .home .top .menu:hover, .home .top .menu:focus, .project .top.switch .menu:hover, .project .top.switch .menu:focus {
       color: #000; } }
 .home .top .home:after, .project .top.switch .home:after {
-  background: #fff; }
+  background: #transparent; }
 .home .top .home:hover:after, .home .top .home:focus:after, .project .top.switch .home:hover:after, .project .top.switch .home:focus:after {
   background: #000; }
 .home .top.open .menu, .project .top.switch.open .menu {
