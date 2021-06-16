@@ -228,7 +228,10 @@ html, body {
   padding: 0;
   font-size: 18px;
   line-height: 1.25;
-  background: #fff; }
+  background-image: url('https://wateretc.github.io/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;}
   @media (min-width: 768px) {
     html, body {
       font-size: 24px; } }
