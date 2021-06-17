@@ -683,10 +683,10 @@ main {
 .info-table .title {
   text-transform: uppercase;
   border-top: 0.1em solid #000;
-  padding: 0.33em 0 0.15em; }
+  padding: 0.33em 0em 0.15em; }
   @media (min-width: 600px) {
     .info-table .title {
-      width: 8.5em;
+      width: 9em;
       margin-right: 0.75em;
       padding-bottom: 0.33em; }
       .info-table .title:last-of-type {
