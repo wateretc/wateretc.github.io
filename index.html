@@ -17,45 +17,158 @@
 <meta name="author" content="water.etc" />
 <meta name="description" content="Architect" /
 <meta name="Copyright" content="Thomas Provost" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="shortcut icon" href="https://wateretc.github.io/css/favicon.png" />
-<link rel="stylesheet" href="https://wateretc.github.io/css/text.css" />
-<script src="https://wateretc.github.io/css/text.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+     
+    body {
+      cursor: all-scroll;
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Work Sans', sans-serif;
+color: #0111ea;
+background-color: #fefcfa;
+}
+
+      
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER STYLES */
+    header {
+      position: fixed;
+      top: 28;
+      left: 0;
+      width: 100%;
+      height: 10vh;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    /* TEXT STYLES */
+    .header-text {
+      font-size: 15vh;
+      font-weight: bold;
+      color: rgba(1, 17, 234, 0.75);
+    }
+
+    /* ICON STYLES */
+    .header-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-icons img {
+      width: 30px;
+      margin-left: 10px;
+    }
+
+    /* MEDIA QUERY RESPONSIVENESS */
+    @media (max-width: 768px) {
+      .header-text {
+        font-size: 15vh;
+        font-weight: bold;
+      }
+
+      .header-icons img {
+        width: 20px;
+      }
+    }
+  </style>
 </head>
- 
-<body class="studio">
-<nav class="top" role="navigation">
-<a class="menu"></a>
-  <ul><li> </li></ul>
-<a class="home" href="https://wateretc.github.io"><span>water,etc</span></a>
-</nav>
-    
-<main>
-<section class="main"><div class="wrapper">
-<br><br><br>
-<h2>water,etc</h2>
-<p>is an architecture and design studio making environments, visualizations, and conceptual works.</p>
-    
-    <h2> </h2>
-    <div class="people">
-        	
-        <div class="person">
-<h3></h3>
-<h4></h4>
+<body>
+  <header>
+    <div class="header-text">Water</div>
+  </header>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<p> 	    		  <img src="/05.jpg"></img></p>
-      
+    /* Set a max width for the content */
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-    <footer class="studio-footer">
-        <div class="contact">
-        <h2> </h2>
-        <p> </p></div>
+    /* Create a responsive grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+    }
 
+    /* Style the grid items */
+    .grid-item {
+      background-color: #f2f2f2;
+      padding: 0px;
+      text-align: left;
+    }
 
-      
-    </footer>
-</div></section>
-</main>
+    .grid-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0px;
+    }
 
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+  </style>
+<body>
+  <div class="container">
+    <div class="grid">
+            <div class="grid-item">
+        <img src="/water_12.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_11.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_10.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_09.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_08.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_07.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_06.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_05.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_04.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_03.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_02.png" alt="Image 1">
+      </div>
+            <div class="grid-item">
+        <img src="/water_01.png" alt="Image 1">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
