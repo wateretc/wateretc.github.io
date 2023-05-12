@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38689024-2"></script>
@@ -41,7 +41,7 @@ background-color: #fefcfa;
     /* HEADER STYLES */
     header {
       position: fixed;
-      top: 28;
+      top: 10;
       left: 0;
       width: 100%;
       height: 10vh;
@@ -53,34 +53,51 @@ background-color: #fefcfa;
       z-index: 9999;
     }
 
-    /* TEXT STYLES */
+    /* HEADER TEXT STYLES */
     .header-text {
-      font-size: 15vh;
+      font-size: 10vh;
       font-weight: bold;
       color: rgba(1, 17, 234, 0.85);
     }
 
-    /* ICON STYLES */
-    .header-icons {
+     /* FOOTER TEXT STYLES */
+    .footer-text {
+      font-size: 3vh;
+      font-weight: bold;
+      color: rgba(1, 17, 234, 0.85);
+    }
+  
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 5vh; /* Minimum height for the footer */
+      background-color: transparent;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      padding: 30 20px;
     }
-
-    .header-icons img {
-      width: 30px;
-      margin-left: 10px;
-    }
-
+  
     /* MEDIA QUERY RESPONSIVENESS */
     @media (max-width: 768px) {
       .header-text {
-        font-size: 15vh;
+        font-size: 10vh;
         font-weight: bold;
       }
 
+      .footer-text {
+        font-size: 3vh;
+        font-weight: bold;
+      }
       .header-icons img {
         width: 20px;
       }
+
+
+
+
     }
 
 /* Make "grid-item" images black and white by default */
@@ -93,16 +110,7 @@ background-color: #fefcfa;
 .grid-item img:hover {
   filter: none;
 }
-
-
-
-  </style>
-</head>
-<body>
-  <header>
-    <div class="header-text">water.etc</div>
-  </header>
-  <style>
+  
     * {
       box-sizing: border-box;
       margin: 0;
@@ -138,6 +146,12 @@ background-color: #fefcfa;
       }
     }
   </style>
+  
+</head>
+<body>
+  <header>
+    <div class="header-text">water.etc</div>
+  </header>
 <body>
   <div class="container">
     <div class="grid">
@@ -169,9 +183,32 @@ background-color: #fefcfa;
         <img src="https://wateretc.github.io/water_07.png" alt="Image 1">
       </div>
       
-      
+        <footer>
+    <div class="footer-text">thomas provost is an architect and assistant professor at detroit mercy sacd. his trans-disciplinary design practice works on or through the built environment, visuals, furniture, stories, texts, and other forms of performance. </div>
+  </footer>
       
     </div>
   </div>
+  
+  <script>
+    // Randomize the grid size and spacing on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.grid');
+      const gridItems = document.querySelectorAll('.grid-item');
+
+      const randomSize = Math.floor(Math.random() * (400 - 200 + 1) + 200);
+      const randomGap = Math.floor(Math.random() * (30 - 10 + 1) + 10);
+
+      grid.style.gridTemplateColumns = `repeat(auto-fit, minmax(${randomSize}px, 1fr))`;
+      grid.style.gridGap = `${randomGap}px`;
+
+      gridItems.forEach((item) => {
+        const randomPadding = Math.floor(Math.random() * (30 - 10 + 1) + 10);
+        item.style.padding = `${randomPadding}px`;
+      });
+    });
+  </script>  
+  
 </body>
 </html>
+  
