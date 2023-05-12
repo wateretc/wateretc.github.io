@@ -189,26 +189,22 @@ background-color: #fefcfa;
       
     </div>
   </div>
+ 
   
-  <script>
-    // Randomize the grid size and spacing on page load
+    <script>
+    // Randomize the image location on page load
     window.addEventListener('DOMContentLoaded', () => {
-      const grid = document.querySelector('.grid');
       const gridItems = document.querySelectorAll('.grid-item');
 
-      const randomSize = Math.floor(Math.random() * (400 - 200 + 1) + 200);
-      const randomGap = Math.floor(Math.random() * (30 - 10 + 1) + 10);
-
-      grid.style.gridTemplateColumns = `repeat(auto-fit, minmax(${randomSize}px, 1fr))`;
-      grid.style.gridGap = `${randomGap}px`;
-
       gridItems.forEach((item) => {
-        const randomPadding = Math.floor(Math.random() * (30 - 10 + 1) + 10);
-        item.style.padding = `${randomPadding}px`;
+        const randomTop = Math.floor(Math.random() * 101);
+        const randomLeft = Math.floor(Math.random() * 101);
+
+        item.style.top = `${randomTop}%`;
+        item.style.left = `${randomLeft}%`;
       });
     });
-  </script>  
-  
+  </script>
 </body>
 </html>
   
