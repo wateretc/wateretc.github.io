@@ -19,7 +19,7 @@
 <meta name="Copyright" content="Thomas Provost" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
 
 <style>
   
@@ -51,28 +51,20 @@ background-color: #fefcfa;
       justify-content: space-between;
       padding: 0 20px;
       z-index: 9999;
-      white-space: nowrap; /* Prevent text from wrapping */
-      overflow: hidden; /* Hide overflowing text */
-      text-overflow: ellipsis;
     }
 
     /* HEADER TEXT STYLES */
     .header-text {
       font-size: 10vh;
-      font-weight: bold;
       color: rgba(1, 17, 234, 0.75);
     }
 
      /* FOOTER TEXT STYLES */
     .footer-text {
       font-size: 3vh;
-      font-weight: bold;
       color: rgba(1, 17, 234, 0.75);
-       filter: blur(4px); 
-        transition: filter 0.3s ease;
-            white-space: nowrap; /* Prevent text from wrapping */
-      overflow: hidden; /* Hide overflowing text */
-      text-overflow: ellipsis;
+      filter: blur(4px); 
+      transition: filter 0.3s ease;
       }
     .footer-text:hover {
       filter: none;
@@ -95,25 +87,15 @@ background-color: #fefcfa;
     @media (max-width: 768px) {
       .header-text {
         font-size: 10vh;
-        font-weight: bold;
       }
 
       .footer-text {
         font-size: 3vh;
-        font-weight: bold;
         filter: blur(4px); 
         transition: filter 0.3s ease;
       }
     .footer-text:hover {
       filter: none;
-    }
-      .header-icons img {
-        width: 20px;
-      }
-
-
-
-
     }
 
 /* Make "grid-item" images black and white by default */
