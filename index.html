@@ -51,6 +51,9 @@ background-color: #fefcfa;
       justify-content: space-between;
       padding: 0 20px;
       z-index: 9999;
+      white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden; /* Hide overflowing text */
+      text-overflow: ellipsis;
     }
 
     /* HEADER TEXT STYLES */
@@ -65,6 +68,14 @@ background-color: #fefcfa;
       font-size: 3vh;
       font-weight: bold;
       color: rgba(1, 17, 234, 0.75);
+       filter: blur(4px); 
+        transition: filter 0.3s ease;
+            white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden; /* Hide overflowing text */
+      text-overflow: ellipsis;
+      }
+    .footer-text:hover {
+      filter: none;
     }
   
     footer {
