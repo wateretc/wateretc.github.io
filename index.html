@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
 
 <style>
+  
 body {
 cursor: all-scroll;
 font-family: 'Montserrat', sans-serif;
@@ -36,6 +37,7 @@ background-color: #fefcfa;
       padding: 0;
     }
 
+
     /* HEADER STYLES */
     header {
       position: fixed;
@@ -48,6 +50,7 @@ background-color: #fefcfa;
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
+      z-index: 9999;
     }
 
     /* TEXT STYLES */
@@ -79,6 +82,20 @@ background-color: #fefcfa;
         width: 20px;
       }
     }
+
+/* Make "grid-item" images black and white by default */
+.grid-item img {
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+/* Restore true color when hovered over */
+.grid-item img:hover {
+  filter: none;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -94,16 +111,16 @@ background-color: #fefcfa;
 
     /* Set a max width for the content */
     .container {
-      max-width: 1200px;
+      max-width: 100%;
       margin: 0 ;
-      padding: 40px;
+      padding: 20px;
     }
 
     /* Create a responsive grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 20px;
+      grid-gap: 50px;
     }
 
     /* Style the grid items */
@@ -125,31 +142,31 @@ background-color: #fefcfa;
   <div class="container">
     <div class="grid">
             <div class="grid-item">
-        <img src="/water_01.png" alt="Image 1">
+        <img src="https://wateretc.github.io/water_01.png" alt="Image 1">
       </div>
       
                   <div class="grid-item">
-        <img src="/water_02.png" alt="Image 1">
+        <img src="https://wateretc.github.io/water_02.png" alt="Image 1">
       </div>
       
                   <div class="grid-item">
-        <img src="/water_03.png" alt="Image 1">
+        <img src="https://wateretc.github.io/water_03.png" alt="Image 1">
       </div>
       
                   <div class="grid-item">
-        <img src="/water_04.png" alt="Image 1">
+        <img src="https://wateretc.github.io/water_04.png" alt="Image 1">
       </div>
       
                   <div class="grid-item">
-        <img src="/water_05.png" alt="Image 1">
+        <img src="https://wateretc.github.io/water_05.png" alt="Image 1">
       </div>
       
                   <div class="grid-item">
-        <img src="/water_06.png" alt="Image 1">
+        <img src="https://wateretc.github.io/water_06.png" alt="Image 1">
       </div>
       
                   <div class="grid-item">
-        <img src="/water_07.png" alt="Image 1">
+        <img src="https://wateretc.github.io/water_07.png" alt="Image 1">
       </div>
       
       
