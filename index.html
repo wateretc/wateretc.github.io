@@ -19,7 +19,7 @@
 <meta name="Copyright" content="Thomas Provost" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
 
 <style>
   
@@ -28,7 +28,7 @@ cursor: all-scroll;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Work Sans', sans-serif;
 color: #0111ea;
-background-color: #fefcfa;
+background-color: #fff;
 }
 
     * {
@@ -56,16 +56,18 @@ background-color: #fefcfa;
     /* HEADER TEXT STYLES */
     .header-text {
       font-size: 10vh;
+      font-weight: bold;
       color: rgba(1, 17, 234, 0.75);
     }
 
      /* FOOTER TEXT STYLES */
     .footer-text {
       font-size: 3vh;
+      font-weight: bold;
       color: rgba(1, 17, 234, 0.75);
-      filter: blur(4px); 
-      transition: filter 0.3s ease;
-      }
+        filter: blur(4px); 
+        transition: filter 0.3s ease;
+    }
     .footer-text:hover {
       filter: none;
     }
@@ -87,16 +89,22 @@ background-color: #fefcfa;
     @media (max-width: 768px) {
       .header-text {
         font-size: 10vh;
+        font-weight: bold;
       }
 
       .footer-text {
         font-size: 3vh;
+        font-weight: bold;
         filter: blur(4px); 
         transition: filter 0.3s ease;
       }
     .footer-text:hover {
       filter: none;
     }
+      .header-icons img {
+        width: 20px;
+      }
+  }
 
 /* Make "grid-item" images black and white by default */
 .grid-item img {
@@ -189,20 +197,25 @@ background-color: #fefcfa;
   </div>
  
   
-    <script>
-    // Randomize the image location on page load
+  <script>
+    // Randomize the grid size and spacing on page load
     window.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.grid');
       const gridItems = document.querySelectorAll('.grid-item');
 
-      gridItems.forEach((item) => {
-        const randomTop = Math.floor(Math.random() * 101);
-        const randomLeft = Math.floor(Math.random() * 101);
+      const randomSize = Math.floor(Math.random() * (400 - 200 + 1) + 200);
+      const randomGap = Math.floor(Math.random() * (30 - 10 + 1) + 10);
 
-        item.style.top = `${randomTop}%`;
-        item.style.left = `${randomLeft}%`;
+      grid.style.gridTemplateColumns = `repeat(auto-fit, minmax(${randomSize}px, 1fr))`;
+      grid.style.gridGap = `${randomGap}px`;
+
+      gridItems.forEach((item) => {
+        const randomPadding = Math.floor(Math.random() * (30 - 10 + 1) + 10);
+        item.style.padding = `${randomPadding}px`;
       });
     });
   </script>
+  
 </body>
 </html>
   
