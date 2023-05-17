@@ -65,8 +65,8 @@ background-color: #fff;
       font-size: 3vh;
       font-weight: bold;
       color: rgba(1, 17, 234, 0.75);
-        filter: blur(4px); 
-        transition: filter 0.3s ease;
+        filter: blur(6px); 
+        transition: filter 0.7s ease;
     }
     .footer-text:hover {
       filter: none;
@@ -74,8 +74,8 @@ background-color: #fff;
   
     footer {
       position: fixed;
-      bottom: 0;
-      left: 0;
+      bottom: 10;
+      left: 10;
       width: 100%;
       min-height: 5vh; /* Minimum height for the footer */
       background-color: transparent;
@@ -83,6 +83,7 @@ background-color: #fff;
       align-items: center;
       justify-content: space-between;
       padding: 30 20px;
+      z-index: 9999;
     }
   
     /* MEDIA QUERY RESPONSIVENESS */
@@ -95,8 +96,9 @@ background-color: #fff;
       .footer-text {
         font-size: 3vh;
         font-weight: bold;
-        filter: blur(4px); 
-        transition: filter 0.3s ease;
+        color: rgba(1, 17, 234, 0.75);
+        filter: blur(6px); 
+        transition: filter 0.7s ease;
       }
     .footer-text:hover {
       filter: none;
@@ -108,7 +110,7 @@ background-color: #fff;
 
 /* Make "grid-item" images black and white by default */
 .grid-item img {
-  filter: grayscale(100%) blur(3px);
+  filter: grayscale(100%) blur(6px);
   transition: filter 0.7s;
 }
 
@@ -188,6 +190,18 @@ background-color: #fff;
                   <div class="grid-item">
         <img src="https://wateretc.github.io/water_07.png" alt="Image 1">
       </div>
+            
+                  <div class="grid-item">
+        <img src="https://wateretc.github.io/water_09.png" alt="Image 1">
+      </div>
+           
+                  <div class="grid-item">
+        <img src="https://wateretc.github.io/water_10.png" alt="Image 1">
+      </div>
+            
+                  <div class="grid-item">
+        <img src="https://wateretc.github.io/water_11.png" alt="Image 1">
+      </div>
       
         <footer>
     <div class="footer-text">thomas provost is an architect and assistant professor at detroit mercy sacd. his trans-disciplinary design practice works on or through the built environment, visuals, furniture, stories, texts, and other forms of performance. </div>
@@ -204,13 +218,13 @@ background-color: #fff;
       const gridItems = document.querySelectorAll('.grid-item');
 
       const randomSize = Math.floor(Math.random() * (400 - 200 + 1) + 200);
-      const randomGap = Math.floor(Math.random() * (30 - 10 + 1) + 10);
+      const randomGap = Math.floor(Math.random() * (40 - 10 + 1) + 10);
 
       grid.style.gridTemplateColumns = `repeat(auto-fit, minmax(${randomSize}px, 1fr))`;
       grid.style.gridGap = `${randomGap}px`;
 
       gridItems.forEach((item) => {
-        const randomPadding = Math.floor(Math.random() * (30 - 10 + 1) + 10);
+        const randomPadding = Math.floor(Math.random() * (40 - 10 + 1) + 10);
         item.style.padding = `${randomPadding}px`;
       });
     });
