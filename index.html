@@ -28,12 +28,6 @@
     background-color: #fff;
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
   /* HEADER STYLES */
   header {
     position: fixed;
@@ -93,54 +87,45 @@
     .header-icons img {
       width: 20px;
     }
+
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
   }
 
-/* Make "grid-item" images black and white by default */
-.grid-item img {
-  filter: grayscale(100%) blur(6px);
-  transition: filter 0.7s;
-}
+  /* Set a max width for the content */
+  .container {
+    max-width: 100%;
+    margin: 0 ;
+    padding: 20px;
+  }
 
-/* Restore true color when hovered over */
-.grid-item img:hover {
-  filter: none;
-}
-  
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  /* Create a responsive grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
+  }
 
-    /* Set a max width for the content */
-    .container {
-      max-width: 100%;
-      margin: 0 ;
-      padding: 20px;
-    }
+  /* Style the grid items */
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+  }
 
-    /* Create a responsive grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 50px;
-    }
+  /* Make "grid-item" images black and white by default */
+  .grid-item img {
+    filter: grayscale(100%) blur(6px);
+    transition: filter 0.7s;
+  }
 
-    /* Style the grid items */
+  /* Restore true color when hovered over */
+  .grid-item img:hover {
+    filter: none;
+  }
+</style>
 
-    .grid-item img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 0px;
-    }
-
-    /* Media query for responsiveness */
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      }
-    }
-  </style>
   
 </head>
 <body>
