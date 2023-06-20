@@ -108,6 +108,12 @@
       grid-gap: 50px;
     }
 
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 50px;
+    }
+
     /* Style the grid items */
     .grid-item img {
       max-width: 100%;
@@ -168,5 +174,30 @@
   <footer>
     <div class="footer-text">water.etc is a trans-disciplinary design practice that works on or through the built environment, visualization, furniture, stories, typesetting, and other forms of performance. Thomas Provost is an architect and assistant professor at Detroit Mercy SACD.</div>
   </footer>
+  <script>
+    // Function to shuffle an array using the Fisher-Yates algorithm
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Get all the grid items
+    const gridItems = Array.from(document.querySelectorAll('.grid-item'));
+
+    // Shuffle the grid items randomly
+    const shuffledGridItems = shuffleArray(gridItems);
+
+    // Clear the container
+    const container = document.querySelector('.container');
+    container.innerHTML = '';
+
+    // Append the shuffled grid items back to the container
+    shuffledGridItems.forEach(gridItem => {
+      container.appendChild(gridItem);
+    });
+  </script>
 </body>
 </html>
