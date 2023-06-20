@@ -2,206 +2,171 @@
 <html>
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH423VQC71"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH423VQC71"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-EH423VQC71');
+    gtag('config', 'G-EH423VQC71');
   </script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Thomas Provost</title>
-<meta name="author" content="water.etc" />
-<meta name="description" content="Architect" /
-<meta name="Copyright" content="Thomas Provost" />
-<link rel="icon" type="image/x-icon" href="https://wateretc.github.io/water_03.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
-  
-<style>
-  body {
-    cursor: all-scroll;
-    font-family: 'Orbit', sans-serif;
-    color: #0111ea;
-    background-color: #fff;
-  }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Thomas Provost</title>
+  <meta name="author" content="water.etc" />
+  <meta name="description" content="Architect" />
+  <meta name="Copyright" content="Thomas Provost" />
+  <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pan_Blue_Circle.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  <style>
+    body {
+      cursor: all-scroll;
+      font-family: 'Orbit', sans-serif;
+      color: #0111ea;
+      background-color: #fff;
+    }
 
-  /* HEADER STYLES */
-  header {
-    position: fixed;
-    top: 10px;  
-    left: 0;
-    width: 100%;
-    height: 10vh;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 9999;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  /* HEADER TEXT STYLES */
-  .header-text {
-    font-size: 10vh;  
-    font-weight: bold;
-    color: rgba(1, 17, 234, 0.75);
-  }
+    /* HEADER STYLES */
+    header {
+      position: fixed;
+      top: 10px;  
+      left: 0;
+      width: 100%;
+      height: 10vh;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 9999;
+    }
 
-  /* FOOTER TEXT STYLES */
-  .footer-text {
-    font-size: 3vh; 
-    font-weight: bold;
-    color: rgba(1, 17, 234, 0.75);
-    filter: blur(6px);
-    transition: filter 0.7s ease;
-  }
+    /* HEADER TEXT STYLES */
+    .header-text {
+      font-size: 10vh;  
+      font-weight: bold;
+      color: rgba(1, 17, 234, 0.75);
+    }
 
-  .footer-text:hover {
-    filter: none;
-  }
+    /* FOOTER TEXT STYLES */
+    .footer-text {
+      font-size: 3vh; 
+      font-weight: bold;
+      color: rgba(1, 17, 234, 0.75);
+      filter: blur(6px);
+      transition: filter 0.7s ease;
+    }
 
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    min-height: 5vh; 
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    padding: 10 10px;
-    justify-content: space-between;
-  }
+    .footer-text:hover {
+      filter: none;
+    }
 
-/* MEDIA QUERY RESPONSIVENESS */
-@media (max-width: 768px) {
-  .header-text {
-    font-size: 10vh;  
-  }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 5vh; 
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      padding: 10px; /* Adjusted padding value */
+      justify-content: space-between;
+    }
 
-  .footer-text {
-    font-size: 3vh;  
-  }
-}
+    /* MEDIA QUERY RESPONSIVENESS */
+    @media (max-width: 768px) {
+      .header-text {
+        font-size: 10vh;  
+      }
 
-  /* Set a max width for the content */
-  .container {
-    max-width: 100%;
-    margin: 0;
-    padding: 20px;
-  }
+      .footer-text {
+        font-size: 3vh;  
+      }
+    }
 
-  /* Create a responsive grid */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 50px;
-  }
+    /* Set a max width for the content */
+    .container {
+      max-width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
 
-  /* Style the grid items */
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 0px;
-  }
+    /* Create a responsive grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 50px;
+    }
 
-  /* Make "grid-item" images black and white by default */
-  .grid-item img {
-    filter: grayscale(100%) blur(6px);
-    transition: filter 0.7s;
-  }
+    /* Style the grid items */
+    .grid-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0px;
+    }
 
-  /* Restore true color when hovered over */
-  .grid-item img:hover {
-    filter: none;
-  }
-</style>
+    /* Make "grid-item" images black and white by default */
+    .grid-item img {
+      filter: grayscale(100%) blur(6px);
+      transition: filter 0.7s;
+    }
 
-
-
-  
+    /* Restore true color when hovered over */
+    .grid-item img:hover {
+      filter: none;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="header-text">water.etc</div>
   </header>
-<body>
   <div class="container">
     <div class="grid">
-            <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_03.png" alt="Image 1">
       </div>
-      
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_02.png" alt="Image 1">
       </div>
-      
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_01.png" alt="Image 1">
       </div>
-      
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_04.png" alt="Image 1">
       </div>
-      
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_05.png" alt="Image 1">
       </div>
-      
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_06.png" alt="Image 1">
       </div>
-      
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_07.png" alt="Image 1">
       </div>
-            
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_09.png" alt="Image 1">
       </div>
-           
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_10.png" alt="Image 1">
       </div>
-            
-                  <div class="grid-item">
+      <div class="grid-item">
         <img src="https://wateretc.github.io/water_11.png" alt="Image 1">
       </div>
-      
-        <footer>
+    </div>
+  </div>
+  <footer>
     <div class="footer-text">water.etc is a trans-disciplinary design practice that works on or through the built environment, visualization, furniture, stories, typesetting, and other forms of performance. Thomas Provost is an architect and assistant professor at Detroit Mercy SACD.</div>
   </footer>
- 
-  <!--   
-  <script>
-    // Randomize the grid size and spacing on page load
-    window.addEventListener('DOMContentLoaded', () => {
-      const grid = document.querySelector('.grid');
-      const gridItems = document.querySelectorAll('.grid-item');
-
-      const randomSize = Math.floor(Math.random() * (400 - 200 + 1) + 200);
-      const randomGap = Math.floor(Math.random() * (40 - 10 + 1) + 10);
-
-      grid.style.gridTemplateColumns = `repeat(auto-fit, minmax(${randomSize}px, 1fr))`;
-      grid.style.gridGap = `${randomGap}px`;
-
-      gridItems.forEach((item) => {
-        const randomPadding = Math.floor(Math.random() * (40 - 10 + 1) + 10);
-        item.style.padding = `${randomPadding}px`;
-      });
-    });
-  </script>
-  -->
 </body>
 </html>
-  
