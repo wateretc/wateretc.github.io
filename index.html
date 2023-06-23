@@ -98,7 +98,7 @@
     .container {
       max-width: 100%;
       margin: 0;
-      padding: 20px;
+      padding: 25px;
     }
 
     /* Create a responsive grid */
@@ -118,29 +118,18 @@
       max-width: 100%;
       height: auto;
       margin-bottom: 0px;
-      filter: grayscale(100%) blur(6px);
-      transition: filter 0.7s;
+      transition: transform 0.5s;
+    }
+
+    .grid-item img {
+      filter: grayscale(100%) blur(5px);
     }
 
     .grid-item img:hover {
       filter: none;
-      transform: scale(1.1);
-    }
-    
-    /* Full screen image styles */
-    .fullscreen {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      cursor: zoom-out;
+      transform: scale(1.05);
     }
 
-    .fullscreen img {
-      max-height: 90vh;
-      max-width: 90%;
-    }
   </style>
 </head>
 <body>
@@ -216,28 +205,6 @@
     // Append the shuffled grid items back to the container
     shuffledGridItems.forEach(gridItem => {
       container.appendChild(gridItem);
-    });
-
-        // Full screen image functionality
-    gridItems.forEach(gridItem => {
-      const image = gridItem.querySelector('img');
-      image.addEventListener('click', function() {
-        if (!image.classList.contains('fullscreen')) {
-          image.classList.add('fullscreen');
-        } else {
-          image.classList.remove('fullscreen');
-        }
-      });
-    });
-
-    // Close full screen image when clicking anywhere
-    document.addEventListener('click', function(event) {
-      const fullscreenImages = Array.from(document.querySelectorAll('.fullscreen'));
-      fullscreenImages.forEach(image => {
-        if (!image.contains(event.target)) {
-          image.classList.remove('fullscreen');
-        }
-      });
     });
   </script>
 </body>
