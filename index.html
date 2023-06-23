@@ -10,6 +10,7 @@
 
     gtag('config', 'G-EH423VQC71');
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -130,6 +131,10 @@
       transform: scale(1.05);
     }
 
+        .dragging {
+      pointer-events: none; /* Disable pointer events during dragging */
+    }
+
   </style>
 </head>
 <body>
@@ -207,18 +212,30 @@
       container.appendChild(gridItem);
     });
 
-        // Add event listeners for drag and drop
-    gridItems.forEach(gridItem => {
-      gridItem.addEventListener('dragstart', e => {
-        e.dataTransfer.setData('text/plain', ''); // Required for dragging to work in some browsers
-        gridItem.style.opacity = '1'; // Change the opacity of the dragged item
-      });
+ // Enable click-and-drag functionality using interact.js
+    interact('.grid-item')
+      .draggable({
+        onstart: function (event) {
+          const target = event.target;
+          target.classList.add('dragging'); // Add dragging class
+        },
+        onmove: function (event) {
+          const target = event.target;
+          const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+          const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-      gridItem.addEventListener('dragend', e => {
-        gridItem.style.opacity = '1'; // Reset the opacity of the dragged item
-      });
-    });
+          // Translate the target element
+          target.style.transform = `translate(${x}px, ${y}px)`;
 
+          // Store the new position in data attributes
+          target.setAttribute('data-x', x);
+          target.setAttribute('data-y', y);
+        },
+        onend: function (event) {
+          const target = event.target;
+          target.classList.remove('dragging'); // Remove dragging class
+        }
+      });
     
   </script>
 </body>
