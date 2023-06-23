@@ -118,7 +118,7 @@
       max-width: 100%;
       height: auto;
       margin-bottom: 0px;
-      transition: transform 0.5s;
+      cursor: move;
     }
 
     .grid-item img {
@@ -206,6 +206,20 @@
     shuffledGridItems.forEach(gridItem => {
       container.appendChild(gridItem);
     });
+
+        // Add event listeners for drag and drop
+    gridItems.forEach(gridItem => {
+      gridItem.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', ''); // Required for dragging to work in some browsers
+        gridItem.style.opacity = '1'; // Change the opacity of the dragged item
+      });
+
+      gridItem.addEventListener('dragend', e => {
+        gridItem.style.opacity = '1'; // Reset the opacity of the dragged item
+      });
+    });
+
+    
   </script>
 </body>
 </html>
