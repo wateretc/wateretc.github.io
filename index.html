@@ -159,6 +159,7 @@
     .grid-item.selected .popup {
       visibility: visible;
       opacity: 1;
+      z-index: 2; /* Bring the selected item to the front */
     }
 
   </style>
@@ -244,9 +245,8 @@
 
     // Append the shuffled grid items back to the container
     shuffledGridItems.forEach((gridItem, index) => {
-      // Set the z-index to bring the selected image to the front
-      gridItem.style.zIndex = index + 50;
-      // Add event listeners for hover and click
+        // Add event listeners for hover and click
+    gridItems.forEach((gridItem) => {
       gridItem.addEventListener('mouseover', () => {
         gridItem.classList.add('selected');
       });
@@ -254,7 +254,6 @@
       gridItem.addEventListener('mouseout', () => {
         gridItem.classList.remove('selected');
       });
-      container.appendChild(gridItem);
     });
 
  // Enable click-and-drag functionality using interact.js
