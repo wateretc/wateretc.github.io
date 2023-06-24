@@ -213,8 +213,8 @@
     container.innerHTML = '';
 
     // Append the shuffled grid items back to the container
-    shuffledGridItems.forEach(gridItem => {
-     // Set the z-index to bring the selected image to the front
+    shuffledGridItems.forEach((gridItem, index) => {
+      // Set the z-index to bring the selected image to the front
       gridItem.style.zIndex = index + 1;
       container.appendChild(gridItem);
     });
