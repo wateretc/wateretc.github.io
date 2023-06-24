@@ -100,7 +100,7 @@
       max-width: 100%;
       margin: 0;
       padding: 25px;
-      margin-top: 60px;
+      margin-top: 80px;
     }
 
     /* Create a responsive grid */
@@ -247,16 +247,28 @@
     shuffledGridItems.forEach((gridItem, index) => {
       // Set the z-index to bring the selected image to the front
       gridItem.style.zIndex = index + 1;
-      // Add event listeners for hover and click
+
+
+    // Add event listeners for hover and click
+    gridItems.forEach((gridItem) => {
       gridItem.addEventListener('mouseover', () => {
         gridItem.classList.add('selected');
+        // Bring the selected item to the front
+        gridItems.forEach(item => {
+          if (item !== gridItem) {
+            item.style.zIndex = 1;
+          }
+        });
+        gridItem.style.zIndex = gridItems.length + 1;
       });
 
       gridItem.addEventListener('mouseout', () => {
         gridItem.classList.remove('selected');
-      });
-      container.appendChild(gridItem);
-    });
+        // Restore the original z-indexes
+        gridItems.forEach((item, index) => {
+          item.style.zIndex = index + 1;
+        });
+
 
  // Enable click-and-drag functionality using interact.js
     interact('.grid-item')
