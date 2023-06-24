@@ -115,11 +115,16 @@
       grid-gap: 50px;
     }
 
+    .grid-item {
+      position: relative;  
+    }
+    
     .grid-item img {
       max-width: 100%;
       height: auto;
       margin-bottom: 0px;
       cursor: move;
+      position: relative;
     }
 
     .grid-item img {
@@ -209,6 +214,8 @@
 
     // Append the shuffled grid items back to the container
     shuffledGridItems.forEach(gridItem => {
+     // Set the z-index to bring the selected image to the front
+      gridItem.style.zIndex = index + 1;
       container.appendChild(gridItem);
     });
 
