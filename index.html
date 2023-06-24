@@ -140,6 +140,27 @@
       pointer-events: none; /* Disable pointer events during dragging */
     }
 
+     /* Styles for the pop-up text */
+    .popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 999;
+    }
+
+    .grid-item:hover .popup,
+    .grid-item.selected .popup {
+      visibility: visible;
+      opacity: 1;
+    }
+
   </style>
 </head>
 <body>
@@ -150,42 +171,51 @@
     <div class="grid">
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_03.png" alt="Image 1">
+        <div class="popup">Color Field, 2019</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_02.png" alt="Image 1">
+        <div class="popup">Williscroft, 2020/div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_01.png" alt="Image 1">
+        <div class="popup">Stone Bothy, 2019</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_04.png" alt="Image 1">
+        <div class="popup">Maize Labyrinth in Bruce, 2020</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_05.png" alt="Image 1">
+        <div class="popup">Speculative Energy Machine, 2020</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_06.png" alt="Image 1">
+        <div class="popup">Garfield Wall Light, 2022</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_07.png" alt="Image 1">
+        <div class="popup">Maize Labyrinth in Bruce no. 2, 2020</div>
+      </div>
+      <div class="grid-item">
+        <img src="https://wateretc.github.io/water_08.png" alt="Image 1">
+        <div class="popup">Smallest Dwelling, 2017</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_09.png" alt="Image 1">
+        <div class="popup">Observation Device, 2017</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_10.png" alt="Image 1">
+        <div class="popup">Smallest Dwelling, 2018</div>
       </div>
       <div class="grid-item">
         <img src="https://wateretc.github.io/water_11.png" alt="Image 1">
+        <div class="popup">Leslieville Storefront, 2018</div>
       </div>
       <div class="grid-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pan_Blue_Circle.png" alt="Image 1">
-      </div>
-            <div class="grid-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Blue_circle_frame.png" alt="Image 1">
-      </div>
-            <div class="grid-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Blue_Fire.svg/768px-Blue_Fire.svg.png" alt="Image 1">
+        <div class="popup">Color Field, 2019</div>
       </div>
     </div>
   </div>
@@ -215,7 +245,15 @@
     // Append the shuffled grid items back to the container
     shuffledGridItems.forEach((gridItem, index) => {
       // Set the z-index to bring the selected image to the front
-      gridItem.style.zIndex = index + 1;
+      gridItem.style.zIndex = index + 50;
+      // Add event listeners for hover and click
+      gridItem.addEventListener('mouseover', () => {
+        gridItem.classList.add('selected');
+      });
+
+      gridItem.addEventListener('mouseout', () => {
+        gridItem.classList.remove('selected');
+      });
       container.appendChild(gridItem);
     });
 
