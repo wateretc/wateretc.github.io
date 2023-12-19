@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  slides.forEach((slide) => {
+    slide.addEventListener("click", function() {
+      showSlide(1);
+    });
+  });
+
   function showSlide(n) {
     currentSlide += n;
     if (currentSlide >= slides.length) {
