@@ -1,17 +1,10 @@
 <!doctype html>
 <html>
 <head>
+  <script defer src="script.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH423VQC71"></script>
   <script defer src="https://wateretc.github.io/script.js"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
- 
-    gtag('config', 'G-EH423VQC71');
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -146,91 +139,16 @@
       }
     }
 
-    /* Set a max width for the content */
-    .container {
-      max-width: 90%;
-      margin: 25px;
-      padding: 25px;
-      margin-top: 90px;
-      margin-bottom: 90px;
-    }
-
-    /* Create a responsive grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-gap: 75px;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-gap: 75px;
-    }
-
-    .grid-item {
-      position: relative;  
-    }
-    
-    .grid-item img {
-      max-width: 90%;
-      height: auto;
-      margin-bottom: 0px;
-      cursor: move;
-      position: relative;
-    }
-
-    .grid-item img {
-      filter: grayscale(100%) blur(3px);
-    }
-
-    .grid-item img:hover {
-      filter: none;
-      transform: scale(1.33);
-    }
-
-        .dragging {
-      pointer-events: none; /* Disable pointer events during dragging */
-    }
-
-     /* Styles for the pop-up text */
-    .popup {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #0111ea;
-      color: #fff;
-      padding: 5px;
-      font-size: 15px;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: 999;
-    }
-
-    .grid-item:hover .popup,
-    .grid-item.selected .popup {
-      visibility: visible;
-      opacity: 1;
-    }
-
+  
   </style>
 </head>
 <body>
   <header>
-    <div class="header-text"><a href="https://wateretc.github.io/">water</a> <a href="https://wateretc.github.io/">etc</a><br><a href="https://wateretc.github.io/">work</a> <a href="https://wateretc.github.io/">etc</a>&nbsp;</div>
+    <div class="header-text"><a href="https://wateretc.github.io/">work</a> <a href="https://wateretc.github.io/">etc</a>&nbsp;</div>
   </header>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
-  <title>Image Slideshow</title>
-</head>
+
 <body>
   <div class="container">
     <div class="slideshow">
