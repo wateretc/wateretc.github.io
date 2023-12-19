@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
   let currentSlide = 0;
   const slides = document.querySelectorAll(".slideshow img");
 
+
+
+  
   document.addEventListener("keydown", function(e) {
     if (e.key === "ArrowLeft") {
       showSlide(-1);
