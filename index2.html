@@ -18,155 +18,83 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Staatliches&display=swap" rel="stylesheet">
 
   <style>
-/* Reset some default styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body setup */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;  /* Align to top */
-  height: 100vh;
-  padding-top: 300px;  /* Push content 300px down from the top */
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    padding: 20px;
 }
 
-/* Grid container */
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-gap: 20px; /* Space between items */
-  width: 90%;
-  max-width: 1200px;
-  padding: 20px;
-  background-color: transparent;  /* Transparent background */
-}
-
-/* Grid item styling */
-.grid-item {
-  position: relative;
-  overflow: hidden;
-  background-color: transparent;  /* Transparent background for items */
-}
-
-/* Image styling */
-.grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure image covers the space without distortion */
-}
-
-/* Responsive Design: Mobile first */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* 1 column layout for small screens */
-    grid-gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Maintain single column for very small screens */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-  }
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+.grid-item {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    border: 2px solid rgba(1, 17, 234, 0.75);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+.grid-item:hover {
+    transform: scale(1.1);
+}
 
+.grid-item .content,
+.grid-item .image {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.3s, opacity 0.3s ease-in;
+}
 
+.grid-item:hover .content,
+.grid-item:hover .image {
+    visibility: visible;
+    opacity: 1;
+}
 
+.content {
+    text-align: center;
+    padding: 10px;
+}
 
-    
+.bio {
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #333;
+}
 
-    /* Styles for links */
-    a {
-      color: inherit;  
-      text-decoration: none;  
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
     }
-
-    /* Styles for visited links */
-    a:visited {
-      color: inherit;  
+    .grid-item {
+        height: 200px;
     }
+}
 
-    /* Styles for hovered links */
-    a:hover {
-      text-decoration: underline; 
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* HEADER STYLES */
-    header {
-      position: fixed;
-      top: 10px;  
-      left: 0;
-      width: 100%;
-      height: 10vh;
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      overflow-wrap: break-word;
-      z-index: 9999;
-    }
-
-    /* HEADER TEXT STYLES */
-    .header-text {
-      font-size: 5vh;  
-      font-weight: regular;
-      font-spacing: 0.03em;
-      color: rgba(1, 17, 234, 0.75);
-    }
-
-    /* FOOTER TEXT STYLES */
-    .footer-text {
-      font-family: 'Staatliches', sans-serif;
-      font-size: 4vh; 
-      font-weight: regular;
-      font-spacing: 0.03em;
-      color: rgba(1, 17, 234, 0.75);
-      filter: blur(6px);
-      transition: filter 0.7s ease;
-    }
-
-    .footer-text:hover {
-      filter: none;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      min-height: 5vh; 
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      padding: 10px;  
-      justify-content: space-between;
-      z-index: 9998;
-    }
-
-    /* MEDIA QUERY RESPONSIVENESS */
-    @media (max-width: 768px) {
-      .header-text {
-        font-size: 5vh;  
-      }
-
-      .footer-text {
-        font-size: 4vh;  
-      }
-    }
 
   
   </style>
@@ -177,24 +105,31 @@ body {
   </header>
 
 
-  <body>
-    <div class="grid-container">
-      <div class="grid-item"><img src="https://wateretc.github.io/water_03.png" alt="Image 1"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_02.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_01.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_04.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_05.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_06.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_07.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_08.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_09.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_10.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_11.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_14.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://wateretc.github.io/water_15.png" alt="Image 2"></div>
-      <div class="grid-item"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pan_Blue_Circle.png" alt="Image 2"></div>
-      <!-- Add more items as needed -->
+  <body>    <div class="grid-container">
+    <div class="grid-item" id="item1">
+        <div class="content">
+            <h2>Water, etc</h2>
+            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec convallis magna. Proin pretium lectus vel ante aliquam, in tristique nunc dictum. Integer vehicula erat vitae mi dapibus, id sollicitudin mi dictum. Vivamus vitae arcu eu ante fringilla tincidunt. Fusce eget ligula ligula. Curabitur eget fermentum nulla. Nulla lacinia volutpat metus, et facilisis libero mollis id.</p>
+        </div>
     </div>
+    <div class="grid-item" id="item2"><div class="image"><img src="https://wateretc.github.io/water_03.png" alt="Image 2"></div></div>
+    <div class="grid-item" id="item3"><div class="image"><img src="https://wateretc.github.io/water_02.png" alt="Image 3"></div></div>
+    <div class="grid-item" id="item4"><div class="image"><img src="https://wateretc.github.io/water_01.png" alt="Image 4"></div></div>
+    <div class="grid-item" id="item5"><div class="image"><img src="https://wateretc.github.io/water_04.png" alt="Image 5"></div></div>
+    <div class="grid-item" id="item6"><div class="image"><img src="https://wateretc.github.io/water_05.png" alt="Image 6"></div></div>
+    <div class="grid-item" id="item7"><div class="image"><img src="https://wateretc.github.io/water_06.png" alt="Image 7"></div></div>
+    <div class="grid-item" id="item8"><div class="image"><img src="https://wateretc.github.io/water_07.png" alt="Image 8"></div></div>
+    <div class="grid-item" id="item9"><div class="image"><img src="https://wateretc.github.io/water_08.png" alt="Image 9"></div></div>
+    <div class="grid-item" id="item10"><div class="image"><img src="https://wateretc.github.io/water_09.png" alt="Image 10"></div></div>
+    <div class="grid-item" id="item11"><div class="image"><img src="https://wateretc.github.io/water_10.png" alt="Image 11"></div></div>
+    <div class="grid-item" id="item12"><div class="image"><img src="https://wateretc.github.io/water_11.png" alt="Image 12"></div></div>
+    <div class="grid-item" id="item13"><div class="image"><img src="https://wateretc.github.io/water_14.png" alt="Image 13"></div></div>
+    <div class="grid-item" id="item14"><div class="image"><img src="https://wateretc.github.io/water_15.png" alt="Image 14"></div></div>
+    <div class="grid-item" id="item15"><div class="image"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pan_Blue_Circle.png" alt="Image 15"></div></div>
+    <div class="grid-item" id="item16"><div class="image"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pan_Blue_Circle.png" alt="Image 16"></div></div>
+</div>
+
+
   </body>
 </html>
   <footer>
